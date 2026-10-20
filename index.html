@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Club Membership</title>
+
+    <link rel="stylesheet"
+          href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module"
+            src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e8e0ff, #c5f5ee);
+            color: #292347;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 430px;
+            padding: 35px 30px;
+            background: white;
+            border-radius: 22px;
+            text-align: center;
+            box-shadow: 0 15px 40px #40306b25;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 27px;
+            color: #49318b;
+        }
+
+        .subtitle {
+            margin: 10px 0 28px;
+            color: #77728d;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 17px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            color: #49415f;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ded8ee;
+            border-radius: 10px;
+            background: #faf9ff;
+            font-size: 14px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #8061d6;
+            box-shadow: 0 0 0 3px #8061d620;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 14px;
+            border: none;
+            border-radius: 10px;
+            background: #7050c5;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #5437a2;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #e7f8f3;
+            color: #216d5d;
+            font-size: 13px;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+        }
+
+        .footer {
+            margin-top: 25px;
+            color: #918aa7;
+            font-size: 11px;
+        }
+
+        @media (max-width: 400px) {
+            .container {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Math Club</h1>
+        <p class="subtitle">Check your membership below!</p>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name"
+                   placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name"
+                   placeholder="Enter your last name">
+        </div>
+
+        <button id="check_button" type="button" py-click="check_member">
+        CHECK MEMBERSHIP
+        </button>
+
+        <div id="result" aria-live="polite">
+            Your membership result will appear here.
+        </div>
+
+        <div class="footer">
+            MATHEMATICS • Seatwork 2 • 2nd Quarter
+        </div>
+
+    </div>
+
+    <script type="py" src="./main.py"></script>
+</body>
+</html>
